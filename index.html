@@ -9,24 +9,27 @@
 </head>
 <body>
     <header class="header">
+        <button id="switch-to-english" class="language-switch-button">EN</button>
+        <button id="switch-to-russian" class="language-switch-button">RU</button>
         <div class="header_wrapper">
-            <div class="nav_frame">
+            
+             <div class="desktop_menu">
                 <nav class="header_nav">
                     <ul class="header_list">
                         <li class="header_item">
-                            <a href="#home" class="header_link">Home</a>
+                            <a href="#home" class="header_link" data-i18n="home-nav">Home</a>
                         </li>
                         <li class="header_item">
-                            <a href="#about" class="header_link">About</a>
+                            <a href="#about" class="header_link" data-i18n="about-nav">About</a>
                         </li>
                         <li class="header_item">
-                            <a href="#blog" class="header_link">Blog</a>
+                            <a href="#blog" class="header_link" data-i18n="blog-nav">Blog</a>
                         </li>
                         <li class="header_item">
-                            <a href="#contact" class="header_link">Contact</a>
+                            <a href="#contact" class="header_link" data-i18n="contact-nav">Contact</a>
                         </li>
                         <li class="header_item">
-                            <a href="#courses" class="header_link">Courses</a>
+                            <a href="#courses" class="header_link" data-i18n="courses-nav">Courses</a>
                         </li>
                     </ul>
                 </nav>
@@ -35,29 +38,53 @@
                 <div class="buttons_container">
                     <div class="search_container">
                         <img src="css/pictures/loop.png" alt="Example Image" class="">
-                        <button class="search_button">Search</button>
+                        <button class="search_button" data-i18n="search-nav">Search</button>
                     </div>
                     <div class="cart_container">
                         <img src="css/pictures/cart.png" alt="Example Image" class="">
-                        <button class="search_button">Cart</button>
+                        <button class="search_button" data-i18n="cart-nav">Cart</button>
                     </div>
-                    <button class="registration_button">Sign Up</button>
+                    <button class="registration_button" data-i18n="sign-nav">Sign Up</button>
                 </div>
             </div>            
+        </div>
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+       
+            <ul class="menu__box">
+                <li class="menu__item">
+                    <a href="#home" class="header_link">Home</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#about" class="header_link">About</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#blog" class="header_link">Blog</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#contact" class="header_link">Contact</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#courses" class="header_link">Courses</a>
+                </li>
+            </ul>
         </div>
     </header>
     <main>
         <section class="homepage_container" id="home">
             <div class="text_section">
                 <div class="caption">
-                    <h1>Become an No-Code expert and find a job</h1>
+                    <h1 class="mob" data-i18n="home-heading">Become an No-Code expert and find a job</h1>
                 </div>
                 <div class="precaption">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel molestie magna curabitur tincidunt nunc sit amet.</p>
+                    <p class="p_mob" data-i18n="home-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel molestie magna curabitur tincidunt nunc sit amet.</p>
                 </div>
                 <div class="buttons">
-                    <button class="explore">Explore Courses</button>
-                    <button class="watch_button_container"> Watch Video</button>
+                    <button class="explore" data-i18n="explore-courses">Explore Courses</button>
+                    <button class="watch_button_container" data-i18n="watch-video"> Watch Video</button>
                     <i class="fa fa-play-circle" aria-hidden="true"></i>
                 </div>
                 <img src="css/pictures/picture_on_main.png" alt="Example Image" class="image">
@@ -67,20 +94,20 @@
         </section>
         <div class="end_of_homepage">
             <div class="p_container">
-                <p>Trusted by the world's best companies</p>
+                <p class="end_mob" data-i18n="trusted-companies">Trusted by the world's best companies</p>
             </div>
         </div>
         <section class="about_us" id="about">
             <div class="main_container">
                 <div class="pink_container">
-                    <button class="about" >About Us</button>
-                    <div class="text_container">
-                        <h2>No-code Education Platform</h2>
+                    <button class="about" data-i18n="about-button" >About Us</button>
+                    <div class="text_container" >
+                        <h2 data-i18n="about-heading">No-code Education Platform</h2>
                     </div>
                     <div class="second_text_container">
-                        <p class="color">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                        <p class="color" data-i18n="about-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
                     </div>
-                    <button class="ab_button">About Us</button>
+                    <button class="ab_button" data-i18n="about-button">About Us</button>
                 </div>
             </div>
         </section>
@@ -90,14 +117,14 @@
                     <img src="css/pictures/2.png" alt="Example Image" class="course1_img">
                     <div class="text_box">
                         <div class="caption1">
-                            <h2>Premium courses from the industry leaders</h2>
+                            <h2 class="adapt" data-i18n="courses1-heading">Premium courses from the industry leaders</h2>
                         </div>
                         <div class="caption2">
-                            <p class="color">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                            <p class="color7" data-i18n="courses1-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
                         </div>
                         <div class="course_buttons">
-                            <button class="gs_button">Get started</button>
-                            <button class="watch_button_container1"> Learn more</button>
+                            <button class="gs_button" data-i18n="get-started">Get started</button>
+                            <button class="watch_button_container1" data-i18n="learn-more"> Learn more</button>
                             <img src="css/pictures/chevron_right.png" alt="Example Image" class="b">
                         </div>
                     </div>
@@ -107,18 +134,18 @@
                     <div class="box2"> 
                         <div class="text_box">
                             <div class="caption1">
-                                <h2>Easily find the perfect course for you</h2>
+                                <h2 class="adapt"  data-i18n="courses2-heading">Easily find the perfect course for you</h2>
                             </div>
                             <div class="caption2">
-                                <p class="color">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                                <p class="color7" data-i18n="courses1-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
                             </div>
                             <div class="course_buttons">
-                                <button class="gs_button">Get started</button>
-                                <button class="watch_button_container1"> Learn more</button>
+                                <button class="gs_button" data-i18n="get-started">Get started</button>
+                                <button class="watch_button_container1" data-i18n="learn-more"> Learn more</button>
                                 <img src="css/pictures/chevron_right.png" alt="Example Image" class="b">
                             </div>
                         </div>
-                        <img src="css/pictures/3.png" alt="Example Image" class="course1_img">
+                        <img src="css/pictures/3.png" alt="Example Image" class="course2_img">
                     </div>
                 </div>
         </section>
@@ -126,40 +153,40 @@
             <div class="pop_courses">
                 <div class="box1">
                     <div class="txt_box">
-                        <button class="trending_button">Trending</button>
+                        <button class="trending_button" data-i18n="trending">Trending</button>
                         <div class="caption3">
-                            <h2>The most popular courses</h2>
+                            <h2 class="adt" data-i18n="trending-heading">The most popular courses</h2>
                         </div>
                         <div class="caption4">
-                           <p class="color2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
+                           <p class="color2" data-i18n="trending-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
                         </div>
                        </div> 
                        <div class="card_box">
                         <div class="card">
                             <div class="card_text">
-                                <button class="beginner_button">Beginner</button>
-                                <div class="caption_card">Webflow Basics</div>
+                                <button class="beginner_button" data-i18n="beginner">Beginner</button>
+                                <div class="caption_card" data-i18n="webflow-basics">Webflow Basics</div>
                                 <div class="price">$ 24.00 USD</div>
                             </div>
-                                <button class="enroll_button">Enroll Course</button>
+                                <button class="enroll_button" data-i18n="enroll-button">Enroll Course</button>
                             <img src="css/pictures/4.png" alt="Example Image" class="card_img">
                         </div>
                         <div class="card">
                             <div class="card_text">
-                                <button class="beginner_button">Beginner</button>
-                                <div class="caption_card">Webflow Interactions Masterclass</div>
+                                <button class="beginner_button" data-i18n="beginner">Beginner</button>
+                                <div class="caption_card" data-i18n="card2">Webflow Interactions Masterclass</div>
                                 <div class="price">$ 55.00 USD</div>
                             </div>
-                            <button class="enroll_button">Enroll Course</button>
+                            <button class="enroll_button" data-i18n="enroll-button">Enroll Course</button>
                             <img src="css/pictures/5.png" alt="Example Image" class="card_img">
                         </div>
                         <div class="card">
                             <div class="card_text">
-                                <button class="beginner_button">Beginner</button> 
-                                <div class="caption_card">Advanced CMS and Integrations</div>
+                                <button class="beginner_button" data-i18n="beginner">Beginner</button> 
+                                <div class="caption_card" data-i18n="card3">Advanced CMS and Integrations</div>
                                 <div class="price">$ 38.00 USD</div>
                             </div>
-                            <button class="enroll_button">Enroll Course</button>
+                            <button class="enroll_button" data-i18n="enroll-button">Enroll Course</button>
                             <img src="css/pictures/6.png" alt="Example Image" class="card_img">
                         </div>
                        </div>
@@ -170,14 +197,14 @@
             <div class="main_block">
                 <div class="pink_block">
                     <div class="text_block">
-                        <button class="rotation">Join us</button> 
+                        <button class="rotation" data-i18n="join-us">Join us</button> 
                         <div class="join_caption">
-                            <h2>Join more than 17,000+ students all over the world</h2>
+                            <h2 class="aaa" data-i18n="join-heading">Join more than 17,000+ students all over the world</h2>
                         </div>
                         <div class="j_precaption">
-                            <p  class="color3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
+                            <p  class="color3" data-i18n="trending-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
                         </div>
-                        <button class="gs_button">Get started</button>
+                        <button class="gs_button" data-i18n="get-started">Get started</button>
                     </div>
                     <img src="css/pictures/7.png" alt="Example Image" class="img">
                 </div>
@@ -188,10 +215,10 @@
                         <img src="css/pictures/p_1.png" alt="Example Image" class="p_img">
                     </div>
                     <div class="point_caption">
-                        <h3>Browse our courses</h3>
+                        <h3 data-i18n="adv1">Browse our courses</h3>
                     </div>
                     <div class="p_precaption">
-                        <p class="color_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique duis cursus mi quis viverra.</p>
+                        <p class="color_p" data-i18n="adv-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique duis cursus mi quis viverra.</p>
                     </div>
                 </div>
                 <div class="point">
@@ -199,10 +226,10 @@
                         <img src="css/pictures/p_2.png" alt="Example Image" class="p_img">
                     </div>
                     <div class="point_caption">
-                        <h3>Purchase quickly and securely</h3>
+                        <h3 data-i18n="adv2">Purchase quickly and securely</h3>
                     </div>
                     <div class="p_precaption">
-                        <p class="color_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique duis cursus mi quis viverra.</p>
+                        <p class="color_p" data-i18n="adv-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique duis cursus mi quis viverra.</p>
                     </div>
                 </div>
                 <div class="point">
@@ -210,22 +237,22 @@
                         <img src="css/pictures/p_3.png" alt="Example Image" class="p_img">
                     </div>
                     <div class="point_caption">
-                        <h3>Start learning right away</h3>
+                        <h3 data-i18n="adv3">Start learning right away</h3>
                     </div>
                     <div class="p_precaption">
-                        <p class="color_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique duis cursus mi quis viverra.</p>
+                        <p class="color_p" data-i18n="adv-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique duis cursus mi quis viverra.</p>
                     </div>
                 </div>
             </div>
         </section>
         <section class="benefits">
             <div class="text_frame">
-                <button class="trending_button">Benefits</button>
+                <button class="trending_button1" data-i18n="benefits">Benefits</button>
                 <div class="b_caption">
-                    <h2>Grow your knowledge from best teachers in the industry</h2>
+                    <h2 class="bbb" data-i18n="benefit-heading">Grow your knowledge from best teachers in the industry</h2>
                 </div>
                 <div class="b1_precaption">
-                    <p class="color2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
+                    <p class="color2" data-i18n="adv-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
                  </div>
             </div>
             <div class="benefits_frame">
@@ -235,10 +262,10 @@
                             <img src="css/pictures/b_1.png" alt="Example Image" class="b_img">
                         </div>
                         <div class="benefit_caption">
-                            <h3>Over 430+ hours of lessons</h3>
+                            <h3 data-i18n="benefit1">Over 430+ hours of lessons</h3>
                         </div>
                         <div class="b_precaption">
-                            <p class="color_b">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                            <p class="color_b" data-i18n="benefit-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
                         </div>
                     </div>
                     <div class="l_benefit">
@@ -246,10 +273,10 @@
                             <img src="css/pictures/b_2.png" alt="Example Image" class="b_img">
                         </div>
                         <div class="benefit_caption">
-                            <h3>40+ teachers</h3>
+                            <h3 data-i18n="benefit2">40+ teachers</h3>
                         </div>
                         <div class="b_precaption">
-                            <p class="color_b">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                            <p class="color_b" data-i18n="benefit-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
                         </div>
                     </div>
                 </div>
@@ -260,10 +287,10 @@
                             <img src="css/pictures/b_3.png" alt="Example Image" class="b_img">
                         </div>
                         <div class="benefit_caption">
-                            <h3>Online community</h3>
+                            <h3 data-i18n="benefit3">Online community</h3>
                         </div>
                         <div class="b_precaption">
-                            <p class="color_b">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                            <p class="color_b" data-i18n="benefit-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
                         </div>
                     </div>
                     <div class="benefit4">
@@ -271,125 +298,129 @@
                             <img src="css/pictures/b_4.png" alt="Example Image" class="b_img">
                         </div>
                         <div class="benefit_caption">
-                            <h3>1-on-1 coaching</h3>
+                            <h3 data-i18n="benefit4">1-on-1 coaching</h3>
                         </div>
                         <div class="b_precaption">
-                            <p class="color_b">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                            <p class="color_b" data-i18n="benefit-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="rt">Get started</button>
+            <button class="rt" data-i18n="get-started">Get started</button>
         </section>
         <section class="testimonials">
             <div class="pink_test">
-                    <button class="test_button">Testimonials</button>
-                    <div class="text_container">
-                        <h2>What our students say</h2>
+                    <button class="test_button" data-i18n="testimonials">Testimonials</button>
+                    <div class="text_container2">
+                        <h2 class="aaa1" data-i18n="test-heading">What our students say</h2>
                     </div>
-                    <div class="second_text_container">
-                        <p class="color">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                    <div class="second_text_container2">
+                        <p class="color2" data-i18n="test-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
                     </div>
-                    <div class="comments_box">
-                        <div class="comment_card">
-                            <div class="stars">
-                                <img src="css/pictures/stars1.png" alt="Example Image" class="">
+                    <div class="comments_container">
+                        <div class="comments_box">
+                            <div class="comment_card">
+                                <div class="stars">
+                                    <img src="css/pictures/stars1.png" alt="Example Image">
+                                </div>
+                                <div class="comment_text">
+                                    <p class="com" data-i18n="trending-paragraph">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+                                </div>
+                                <div class="comment_author">
+                                    <img src="css/pictures/o.png" alt="Example Image" class="s">
+                                </div>
                             </div>
-                            <div class="comment_text">
-                                <p class="com">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+                            <div class="comment_card">
+                                <div class="stars">
+                                    <img src="css/pictures/stars1.png" alt="Example Image" class="">
+                                </div>
+                                <div class="comment_text">
+                                    <p class="com" data-i18n="trending-paragraph">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+                                </div>
+                                <div class="comment_author">
+                                    <img src="css/pictures/m.png" alt="Example Image" class="s">
+                                </div>
                             </div>
-                            <div class="comment_author">
-                                <img src="css/pictures/o.png" alt="Example Image" class="">
+                            <div class="comment_card">
+                                <div class="stars">
+                                    <img src="css/pictures/stars1.png" alt="Example Image" class="">
+                                </div>
+                                <div class="comment_text">
+                                    <p class="com" data-i18n="trending-paragraph">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+                                </div>
+                                <div class="comment_author">
+                                    <img src="css/pictures/l.png" alt="Example Image" class="s">
+                                </div>
                             </div>
-                        </div>
-                        <div class="comment_card">
-                            <div class="stars">
-                                <img src="css/pictures/stars1.png" alt="Example Image" class="">
-                            </div>
-                            <div class="comment_text">
-                                <p class="com">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
-                            </div>
-                            <div class="comment_author">
-                                <img src="css/pictures/m.png" alt="Example Image" class="">
-                            </div>
-                        </div>
-                        <div class="comment_card">
-                            <div class="stars">
-                                <img src="css/pictures/stars1.png" alt="Example Image" class="">
-                            </div>
-                            <div class="comment_text">
-                                <p class="com">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
-                            </div>
-                            <div class="comment_author">
-                                <img src="css/pictures/l.png" alt="Example Image" class="">
-                            </div>
-                        </div>
-                     </div>
+                         </div>
+                    </div>
                 </div>
         </section>
         <section class="blog" id="blog">
             <div class="blog_box">
-                <button class="blog_button">Blog</button>
+                <button class="blog_button" data-i18n="blog">Blog</button>
                 <div class="blog_caption">
-                    <h1 class="blog_text">Our latest posts</h1>
+                    <h1 class="blog_text" data-i18n="blog-heading">Our latest posts</h1>
                 </div>
             </div>
-            <button class="view_button">View all</button>
-            <div class="cards_frame">
-                <div class="b_card">
-                    <div class="photo">
-                        <img src="css/pictures/blog_1.png" alt="Example Image" class="">
+            <button class="view_button" data-i18n="view-all">View all</button>
+            <div class="comments_container">
+                <div class="cards_frame">
+                    <div class="b_card">
+                        <div class="photo">
+                            <img src="css/pictures/blog_1.png" alt="Example Image" class="">
+                        </div>
+                        <button class="bl_button" data-i18n="blog1-button">Freelance</button>
+                        <div class="blog_caption">
+                            <h3 data-i18n="blog1-heading">7 freelance mistakes to avoid</h3>
+                        </div>
+                        <div class="blog_precaption">
+                            <p class="blg_color" data-i18n="benefit-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                        </div>
+                        <div class="rdm_container">
+                            <img src="css/pictures/read_more.png" alt="Example Image" class="rdm">
+                        </div>
                     </div>
-                    <button class="bl_button">Freelance</button>
-                    <div class="blog_caption">
-                        <h3>7 freelance mistakes to avoid</h3>
+                    <div class="b_card">
+                        <div class="photo">
+                            <img src="css/pictures/blog_2.png" alt="Example Image" class="">
+                        </div>
+                        <button class="bl_button" data-i18n="blog2-button">UI/UX Design</button>
+                        <div class="blog_caption">
+                            <h3 data-i18n="blog2-heading">Brand design process explained</h3>
+                        </div>
+                        <div class="blog_precaption">
+                            <p class="blg_color" data-i18n="benefit-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                        </div>
+                        <img src="css/pictures/read_more.png" alt="Example Image" class="rdm">
                     </div>
-                    <div class="blog_precaption">
-                        <p class="blg_color">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-                    </div>
-                    <div class="rdm_container">
+                    <div class="b_card">
+                        <div class="photo">
+                            <img src="css/pictures/blog_3.png" alt="Example Image" class="">
+                        </div>
+                        <button class="bl_button" data-i18n="blog3-button">Business</button>
+                        <div class="blog_caption">
+                            <h3 data-i18n="blog3-heading">The beginner's guide to recruiting a Webflow</h3>
+                        </div>
+                        <div class="blog_precaption">
+                            <p class="blg_color" data-i18n="benefit-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                        </div>
                         <img src="css/pictures/read_more.png" alt="Example Image" class="rdm">
                     </div>
                 </div>
-                <div class="b_card">
-                    <div class="photo">
-                        <img src="css/pictures/blog_2.png" alt="Example Image" class="">
-                    </div>
-                    <button class="bl_button">UI/UX Design</button>
-                    <div class="blog_caption">
-                        <h3>Brand design process explained</h3>
-                    </div>
-                    <div class="blog_precaption">
-                        <p class="blg_color">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-                    </div>
-                    <img src="css/pictures/read_more.png" alt="Example Image" class="rdm">
-                </div>
-                <div class="b_card">
-                    <div class="photo">
-                        <img src="css/pictures/blog_3.png" alt="Example Image" class="">
-                    </div>
-                    <button class="bl_button">Business</button>
-                    <div class="blog_caption">
-                        <h3>The beginners guide to recruiting a Webflow</h3>
-                    </div>
-                    <div class="blog_precaption">
-                        <p class="blg_color">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-                    </div>
-                    <img src="css/pictures/read_more.png" alt="Example Image" class="rdm">
-                </div>
-            </div>
+            </div>      
         </section>
         <section class="start">
             <div class="start_box">
                 <div class="start_caption">
-                    <h1 class="st">Start learning today</h1>
+                    <h1 class="st" data-i18n="start-heading">Start learning today</h1>
                 </div>
                 <div class="start_precaption">
-                    <p class="color_start">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                    <p class="color_start" data-i18n="test-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
                 </div>
                 <div class="box_buttons">
-                    <button class="st_gs_button">Get started</button>
-                    <button class="st_cu_button">Contact us</button>
+                    <button class="st_gs_button" data-i18n="get-started">Get started</button>
+                    <button class="st_cu_button" data-i18n="contact-us">Contact us</button>
                 </div>
             </div>
         </section>
@@ -397,66 +428,68 @@
     <footer id="contact">
         <div class="subscribe_box">
             <div class="top_text">
-                <p class="sb_text">Join our newsletter to stay up to date on features and releases.</p>
+                <p class="sb_text" data-i18n="subs-heading">Join our newsletter to stay up to date on features and releases.</p>
             </div>
             <div class="field_and_button">
                 <input type="text" class="input_field">
-                <button class="sb_gs_button">Subscribe</button>
+                <button class="sb_gs_button" data-i18n="subscribe">Subscribe</button>
             </div>
            <div class="buttom_text">
-            <p class="bt">By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.</p>
+            <p class="bt" data-i18n="subs-paragraph">By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.</p>
            </div>
         </div>
-        <div class="list_frame">
-            <div class="list">
-                <ul>
-                    <li class="footer_list">Pages</li>
-                    <li class="footer_list">Home</li>
-                    <li class="footer_list">About</li>
-                    <li class="footer_list">Contact</li>
-                    <li class="footer_list">Blog</li>
-                    <li class="footer_list">Courses</li>
-                    <li class="footer_list">Teachers</li>
-                </ul>
-            </div>
-            <div class="list">
-                <ul>
-                    <li class="footer_list">CMS Pages</li>
-                    <li class="footer_list">Blog Post</li>
-                    <li class="footer_list">Blog Categories</li>
-                    <li class="footer_list">Courses Single</li>
-                    <li class="footer_list">Courses Categories</li>
-                    <li class="footer_list">Product Page</li>
-                    <li class="footer_list">Product Categories</li>
-                    <li class="footer_list">Teachers Single</li>
-                    <li class="footer_list">Episode Single</li>
-                </ul>
-            </div>
-            <div class="list">
-                <ul>
-                    <li  class="footer_list">Account Pages</li>
-                    <li  class="footer_list">Login</li>
-                    <li  class="footer_list">Sign Up</li>
-                    <li  class="footer_list">Forgot Password</li>
-                    <li  class="footer_list">Reset Password</li>
-                    <li  class="footer_list">Email Confirmation</li>
-                </ul>
-            </div>
-            <div class="list">
-                <ul>
-                    <li class="footer_list">Utility Pages</li>
-                    <li class="footer_list">Style Guide</li>
-                    <li class="footer_list">Changelog</li>
-                    <li class="footer_list">Licenses</li>
-                    <li class="footer_list">404</li>
-                    <li class="footer_list">Password</li>
-                </ul>
+        <div class="comments_container">
+            <div class="list_frame">
+                <div class="list">
+                    <ul>
+                        <li class="footer_list" data-i18n="pages">Pages</li>
+                        <li class="footer_list"data-i18n="home-nav">Home</li>
+                        <li class="footer_list" data-i18n="about-nav">About</li>
+                        <li class="footer_list" data-i18n="contact">Contact</li>
+                        <li class="footer_list" data-i18n="blog-nav">Blog</li>
+                        <li class="footer_list" data-i18n="courses-nav">Courses</li>
+                        <li class="footer_list" data-i18n="teachers">Teachers</li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li class="footer_list" data-i18n="CMS Pages">CMS Pages</li>
+                        <li class="footer_list" data-i18n="Blog Post">Blog Post</li>
+                        <li class="footer_list" data-i18n="Blog Categories">Blog Categories</li>
+                        <li class="footer_list" data-i18n="Courses Single">Courses Single</li>
+                        <li class="footer_list" data-i18n="Courses Categories">Courses Categories</li>
+                        <li class="footer_list" data-i18n="Product Page">Product Page</li>
+                        <li class="footer_list" data-i18n="Product Categories">Product Categories</li>
+                        <li class="footer_list" data-i18n="Teachers Single">Teachers Single</li>
+                        <li class="footer_list" data-i18n="Episode Single">Episode Single</li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li  class="footer_list" data-i18n="Account Pages">Account Pages</li>
+                        <li  class="footer_list" data-i18n="Login">Login</li>
+                        <li  class="footer_list" data-i18n="Sign Up">Sign Up</li>
+                        <li  class="footer_list" data-i18n="Forgot Password">Forgot Password</li>
+                        <li  class="footer_list" data-i18n="Reset Password">Reset Password</li>
+                        <li  class="footer_list" data-i18n="Email Confirmation">Email Confirmation</li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li class="footer_list" data-i18n="Utility Pages">Utility Pages</li>
+                        <li class="footer_list" data-i18n="Style Guide">Style Guide</li>
+                        <li class="footer_list" data-i18n="Changelog">Changelog</li>
+                        <li class="footer_list" data-i18n="Licenses">Licenses</li>
+                        <li class="footer_list" data-i18n="404">404</li>
+                        <li class="footer_list" data-i18n="Password">Password</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="line"></div>
         <div class="the_end">
             <div class="text_end">
-                <p class="bts">© Learnico by Minimal Square . Powered by Webflow</p>
+                <p class="bts" data-i18n="bts">© Learnico by Minimal Square . Powered by Webflow</p>
             </div>
             <div class="icons_frame">
                 <img src="css/pictures/facebook.png" alt="Example Image" class="">
@@ -465,5 +498,6 @@
             </div>
         </div>
     </footer>
+    <script src="functions.js"></script>
 </body>
 </html>
