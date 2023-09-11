@@ -162,7 +162,6 @@ gap: 24px;
   justify-content: center;
   align-items: center;
   gap: 24px;
- 
 }
 .search_container{
   display: flex;
@@ -191,6 +190,9 @@ flex-shrink: 0;
   background-color: transparent;
   border: none; 
   outline: none;
+}
+.search_button.active{
+    color: #000000;
 }
 .cart_container{
   display: flex;
@@ -287,7 +289,9 @@ p{
   transition: background-color 0.3s, transform 0.2s;
   cursor: pointer;
 }
-
+.explore.active{
+    color: #000000;
+}
 .explore:hover {
   background-color: #158E5E;
   transform: scale(1.05);
@@ -310,6 +314,9 @@ p{
   border: none; 
   outline: none;
 }
+.watch_button_container.active{
+    color: #000000;
+}
 .language-switch-button {
   background-color: transparent;
   border: none;
@@ -321,7 +328,9 @@ p{
   cursor: pointer;
   transition: color 0.3s;
 }
-
+.language-switch-button.active{
+    color: #000000;
+}
 .language-switch-button:hover {
   color: #22A45A; /* Цвет при наведении курсора */
 }
@@ -473,6 +482,9 @@ line-height: 57.6px;
   transition: background-color 0.3s, transform 0.2s;
   cursor: pointer;
 }
+.ab_button.active{
+    color: #ffc6af;
+}
 .ab_button:hover {
   background-color: #4B5563;
   transform: scale(1.05);
@@ -554,6 +566,10 @@ background: lightgray 50% / cover no-repeat;
  font-weight: 400;
  line-height: 24px; 
  }
+ .gs_button.active{
+    color: #ffc6af;
+ }
+ 
  .watch_button_container1{
    display: flex;
    width: 114px;
@@ -575,6 +591,9 @@ background: lightgray 50% / cover no-repeat;
    border: none; 
    outline: none;
    margin-top: 20px;
+ }
+ .watch_button_container1.active{
+    color: #ffc6af;
  }
  .b{
    margin-top: 21px;
@@ -713,6 +732,9 @@ border: none;
   font-weight: 400;
   line-height: 24px;
 }
+.enroll_button.active{
+    color: #000000;
+}
 .caption_card{
   width: 262px;
   height: 68px;
@@ -758,6 +780,9 @@ background: #FCD8CA;
 height: 411px;
 margin-top: 64px;
 margin-left: 64px;
+}
+.rt.active{
+  color:  #ffc6af
 }
 .rotation{
   margin-right: 416px;
@@ -1101,6 +1126,9 @@ margin-left: -25px;
   margin-left: 1249px;
   margin-top: 182px;
 }
+.view_button.active{
+    color: #004952;
+}
 .cards_frame{
   display: flex;
 width: 1280px;
@@ -1220,6 +1248,9 @@ font-style: normal;
 font-weight: 400;
 line-height: 24px; /* 150% */
 }
+.st_gs_button.active{
+    color: #000000;
+}
 .st_cu_button{
   width: 132px;
 height: 50px;
@@ -1234,6 +1265,9 @@ font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: 24px; /* 150% */
+}
+.st_cu_button.active{
+    color: #22A45A;
 }
 footer{
   margin: 0 auto;
@@ -1301,6 +1335,9 @@ font-size: 15px;
 font-style: normal;
 font-weight: 400;
 line-height: 24px; /* 160% */
+}
+.sb_gs_button.active{
+    color: #000000;
 }
 .buttom_text{
   width: 313px;

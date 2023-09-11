@@ -27,3 +27,26 @@ fetch('translate.json')
   });
 })
 .catch(error => console.error('Ошибка при загрузке JSON файла:', error));
+
+const buttons = document.querySelectorAll('button');
+
+// Создаем функцию для удаления класса "active" у всех кнопок
+function removeActiveClass() {
+  buttons.forEach(button => {
+    button.classList.remove('active');
+  });
+}
+
+// Создаем функцию для обработки клика на кнопке
+function handleButtonClick(event) {
+  // Удаляем класс "active" у всех кнопок
+  removeActiveClass();
+  
+  // Добавляем класс "active" на кнопку, на которой произошел клик
+  event.target.classList.add('active');
+}
+
+// Добавляем обработчик клика на каждую кнопку
+buttons.forEach(button => {
+  button.addEventListener('click', handleButtonClick);
+});
