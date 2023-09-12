@@ -4,6 +4,28 @@ body {
   margin: 0;
   padding: 0;
 }
+#playPauseButton {
+    background: none;
+    background-image: url('play-icon.png'); 
+    background-size: cover;
+    width: 80px; 
+    height: 80px; 
+    border: none;
+    cursor: pointer;
+    margin-left: 680px;
+    margin-top: 40px;
+  }
+  
+  #playPauseButton.pause {
+    background-image: url('pause-icon.png'); 
+  }
+  
+  .custom-button {
+    border-radius: 20px;
+    padding: 10px 20px; 
+  }
+  
+
 .hamburger-menu{
   display: none;
 }

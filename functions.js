@@ -50,3 +50,36 @@ function handleButtonClick(event) {
 buttons.forEach(button => {
   button.addEventListener('click', handleButtonClick);
 });
+
+const audio = document.getElementById('myAudio');
+const playPauseButton = document.getElementById('playPauseButton');
+
+let isPlaying = false;
+
+playPauseButton.addEventListener('click', togglePlay);
+
+function togglePlay() {
+  if (isPlaying) {
+    audio.pause();
+  } else {
+    audio.play();
+  }
+  isPlaying = !isPlaying;
+  updateButton();
+}
+
+function updateButton() {
+  if (isPlaying) {
+    playPauseButton.classList.add('pause');
+    playPauseButton.textContent = '';
+  } else {
+    playPauseButton.classList.remove('pause');
+    playPauseButton.textContent = '';
+  }
+}
+
+audio.addEventListener('ended', () => {
+  isPlaying = false;
+  updateButton();
+});
+
