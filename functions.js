@@ -83,3 +83,19 @@ audio.addEventListener('ended', () => {
   updateButton();
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const portfolioBtn = document.querySelector('.btn');
+  const portfolioImages = document.querySelectorAll('.big_img');
+
+  let currentIndex = 0;
+
+  portfolioBtn.addEventListener('click', () => {
+    // Изменяем src текущего изображения
+    portfolioImages[currentIndex].src = `css/pictures/${currentIndex + 2}.png`;
+
+    // Увеличиваем индекс или сбрасываем его на 0, если достигнут конец списка
+    currentIndex = (currentIndex + 1) % portfolioImages.length;
+  });
+});
+
+

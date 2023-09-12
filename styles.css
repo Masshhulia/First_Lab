@@ -6,7 +6,7 @@ body {
 }
 #playPauseButton {
     background: none;
-    background-image: url('play-icon.png'); 
+    background-image: url('css/pictures/play-icon.png'); 
     background-size: cover;
     width: 80px; 
     height: 80px; 
@@ -17,7 +17,7 @@ body {
   }
   
   #playPauseButton.pause {
-    background-image: url('pause-icon.png'); 
+    background-image: url('css/pictures/pause-icon.png'); 
   }
   
   .custom-button {
@@ -25,7 +25,26 @@ body {
     padding: 10px 20px; 
   }
   
-
+.btn{
+    position: absolute;
+    width: 152px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid #22A45A;
+    background: #22A45A;
+    color: #FFF;
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+    margin-top: 700px;
+    margin-left: 1000px;
+}
 .hamburger-menu{
   display: none;
 }
