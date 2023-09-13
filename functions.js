@@ -98,4 +98,15 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+const themeSwitch = document.getElementById('theme-switch');
+
+themeSwitch.addEventListener('change', () => {
+    const body = document.body;
+
+    if (themeSwitch.checked) {
+        body.classList.add('dark-theme');
+    } else {
+        body.classList.remove('dark-theme');
+    }
+});
 
